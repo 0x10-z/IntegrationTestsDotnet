@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<AssemblyName>ExampleProject.IntegrationTests</AssemblyName>
+		<RootNamespace>ExampleProject.IntegrationTests</RootNamespace>
+		<RunSettingsFilePath>$(SolutionDir)\CodeCoverage.runsettings</RunSettingsFilePath>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="coverlet.collector" Version="3.2.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="FluentAssertions" Version="6.9.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.10" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+		<PackageReference Include="System.Text.Json" Version="6.0.6" />
+		<PackageReference Include="xunit" Version="2.4.2" />
+		<PackageReference Include="xunit.categories" Version="2.0.6" />
+		<PackageReference Include="Xunit.Combinatorial" Version="1.5.25" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ExampleProject\ExampleProject.csproj" />
+	</ItemGroup>
+
+</Project>
